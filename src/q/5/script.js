@@ -58,6 +58,11 @@ function generateMatrix() {
     }
   }
   emptyCellsCount = n * n;
+
+  if (k === n + 1 || k === n * n - 1) {
+    printResult('IMPOSSIBLE');
+    return;
+  }
   
   try {
     generateDiagonal(n, k);
